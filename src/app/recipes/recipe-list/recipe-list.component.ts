@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { Recipe } from '../recipe.model';
+
+
+
+
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,11 +12,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeListComponent implements OnInit {
 
-  recipes: [];
+  recipes: Recipe[] = [
+    new Recipe("a test recipe", "this is a test" , 'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_960_720.jpg'),
+    new Recipe("a test recipe", "this is a test" , 'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_960_720.jpg')
+    
+  ];
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit() {
   }
 
 }
+
+
+// @Injectable() export class MyImageUrls{
+//   public imageUrl = 
+// }
